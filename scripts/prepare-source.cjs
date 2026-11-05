@@ -16,12 +16,31 @@ try {
   execFileSync('tar', ['-xzf', archive, '-C', root], { stdio: 'inherit' });
 
   // Keep the setup lock's string _id accurately typed with MongoDB 7+.
+  // Normalize accidental outer whitespace around the one-time setup secret.
   const bootstrapRoute = path.join(root, 'app', 'api', 'auth', 'bootstrap', 'route.ts');
   if (fs.existsSync(bootstrapRoute)) {
-    const source = fs.readFileSync(bootstrapRoute, 'utf8');
-    const original = 'const setupLocks = db.collection("system_locks");';
-    const fixed = 'const setupLocks = db.collection<{ _id: string; createdAt: Date }>("system_locks");';
-    if (source.includes(original)) fs.writeFileSync(bootstrapRoute, source.replace(original, fixed));
+    let source = fs.readFileSync(bootstrapRoute, 'utf8');
+    const patches = [
+      [
+        'const setupLocks = db.collection("system_locks");',
+        'const setupLocks = db.collection<{ _id: string; createdAt: Date }>("system_locks");',
+      ],
+      [
+        'const configuredSecret = process.env.BOOTSTRAP_SECRET;',
+        'const configuredSecret = process.env.BOOTSTRAP_SECRET?.trim();',
+      ],
+      [
+        'const suppliedSecret = typeof body.secret === "string" ? body.secret : "";',
+        'const suppliedSecret = typeof body.secret === "string" ? body.secret.trim() : "";',
+      ],
+    ];
+    for (const [original, fixed] of patches) {
+      if (!source.includes(original)) {
+        throw new Error('Expected bootstrap route text was not found; refusing an incomplete patch.');
+      }
+      source = source.replace(original, fixed);
+    }
+    fs.writeFileSync(bootstrapRoute, source);
   }
   // Apply checked-in source overrides after extracting the compact source archive.
   // This keeps the app source editable while retaining the repository's split archive packaging.
