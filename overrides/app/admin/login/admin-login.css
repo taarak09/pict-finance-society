@@ -1,0 +1,26 @@
+.admin-login-page .auth-left{padding:42px 8%}
+.admin-login-page .auth-left .brand-copy strong{font-size:16px}
+.admin-login-page .auth-left .brand-copy small{font-size:10px;letter-spacing:1.2px}
+.admin-login-page .auth-content{width:100%;max-width:500px;margin:auto 0;position:relative;z-index:1}
+.admin-login-page .auth-content>.eyebrow{font-size:12px;letter-spacing:1.5px;margin-bottom:17px}
+.admin-login-page .auth-content h1{font-size:clamp(50px,5.4vw,68px);line-height:1.02;letter-spacing:-3px;margin:0 0 22px}
+.admin-login-page .auth-content>p{max-width:450px;font-size:15px;line-height:1.75;color:#c0cec3;margin:0 0 31px}
+.admin-login-page .auth-form .field-label{font-size:14px;gap:10px;margin-bottom:22px;color:#344b3d}
+.admin-login-page .auth-form .field-label input{min-height:54px;padding:15px 16px;font-size:15px;line-height:1.4;border-radius:6px;color:#213b2e}
+.admin-login-page .auth-form .field-label input::placeholder{font-size:14px;color:#839087}
+.admin-login-page .auth-form button{min-height:54px;font-size:15px;font-weight:800;padding:0 19px;border-radius:6px}
+.admin-login-page .auth-content .form-error{font-size:13px;padding:13px 15px;line-height:1.5}
+.admin-login-page .auth-content .auth-footnote,.admin-login-page .auth-content .auth-switch{font-size:13px;line-height:1.6;margin-top:24px}
+.admin-login-page .auth-content .auth-footnote a,.admin-login-page .auth-content .auth-switch a{font-size:13px}
+.admin-login-page .auth-right-copy .eyebrow{font-size:12px;letter-spacing:1.4px}
+.admin-login-page .auth-right-copy h2{font-size:clamp(30px,3vw,40px);line-height:1.18}
+.admin-login-page .auth-right-copy p{font-size:14px;line-height:1.7}
+@media(max-width:760px){
+  .admin-login-page .auth-left{min-height:400px;padding:28px 7%}
+  .admin-login-page .auth-content h1{font-size:48px;letter-spacing:-2px}
+  .admin-login-page .auth-content>p{font-size:14px}
+  .admin-login-page .auth-right{padding:38px 7%}
+  .admin-login-page .auth-form .field-label{font-size:14px}
+  .admin-login-page .auth-form .field-label input{font-size:16px;min-height:56px}
+  .admin-login-page .auth-form button{font-size:15px;min-height:54px}
+}
