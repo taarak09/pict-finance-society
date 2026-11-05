@@ -15,7 +15,7 @@ export default async function HomePage() {
 
       <header className="pf-nav">
         <Link href="/" className="pf-brand" aria-label="PICT Finance Society home">
-          <span className="pf-brand-mark"><b>PF</b><i /></span>
+          <span className="pf-brand-logo-frame"><img className="pf-brand-logo" src="/pict-finance-society-logo.png" alt="PICT Finance Society official logo" /></span>
           <span className="pf-brand-copy"><strong>PICT Finance Society</strong><small>PICT · PUNE</small></span>
         </Link>
         <nav className="pf-nav-links" aria-label="Main navigation">
@@ -57,11 +57,9 @@ export default async function HomePage() {
           <div className="pf-orbit pf-orbit-c"><span /></div>
           <div className="pf-art-cross pf-cross-a">+</div>
           <div className="pf-art-cross pf-cross-b">✳</div>
-          <div className="pf-art-monogram">
-            <span className="pf-monogram-top">STUDENT-LED COMMUNITY</span>
-            <strong>PF<span>.</span></strong>
+          <div className="pf-art-monogram pf-official-logo-card">
+            <img className="pf-hero-official-logo" src="/pict-finance-society-logo.png" alt="PICT Finance Society official logo" />
             <span className="pf-monogram-full">PICT FINANCE SOCIETY</span>
-            <span className="pf-monogram-bottom">PICT · PUNE</span>
             <i />
           </div>
           <div className="pf-float-card pf-float-card-top"><span className="pf-float-icon">↗</span><span><b>Ideas in motion</b><small>Learn · Analyse · Grow</small></span></div>
@@ -146,7 +144,7 @@ export default async function HomePage() {
       </section>
 
       <footer className="pf-footer">
-        <Link href="/" className="pf-brand"><span className="pf-brand-mark"><b>PF</b><i /></span><span className="pf-brand-copy"><strong>PICT Finance Society</strong><small>PICT · PUNE</small></span></Link>
+        <Link href="/" className="pf-brand pf-footer-brand"><span className="pf-brand-logo-frame"><img className="pf-brand-logo" src="/pict-finance-society-logo.png" alt="PICT Finance Society official logo" /></span><span className="pf-brand-copy"><strong>PICT Finance Society</strong><small>PICT · PUNE</small></span></Link>
         <span>THINK DEEPER. SEE FURTHER. BUILD TOGETHER.</span>
         <div><Link href="/login">Member login</Link><Link href="/admin/login">Admin</Link></div>
       </footer>
