@@ -259,3 +259,82 @@
 @media(prefers-reduced-motion:reduce) {
   .pf-monogram-full { opacity: 1; animation: none; }
 }
+
+/* Official PICT Finance Society logo — cropped from the supplied original image. */
+.pf-brand-logo-frame {
+  width: 124px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  padding: 3px 5px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(0,0,0,.16);
+}
+.pf-brand-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.pf-art-monogram.pf-official-logo-card {
+  width: 330px;
+  height: 198px;
+  padding: 15px 18px;
+  gap: 4px;
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: 0 35px 90px rgba(0,0,0,.38), 0 0 0 8px rgba(201,243,109,.07);
+  backdrop-filter: none;
+  transform: rotate(-4deg);
+}
+.pf-art-monogram.pf-official-logo-card:before {
+  inset: 8px;
+  border: 1px solid rgba(108,148,75,.12);
+  border-radius: 18px;
+  pointer-events: none;
+}
+.pf-hero-official-logo {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: min(100%, 285px);
+  height: auto;
+  max-height: 130px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+.pf-art-monogram.pf-official-logo-card .pf-monogram-full {
+  position: relative;
+  z-index: 2;
+  margin: -2px 0 0;
+  color: #17352d;
+  font: 800 14px/1.2 Manrope, sans-serif;
+  letter-spacing: 1.25px;
+  opacity: 1;
+  filter: none;
+  animation: none;
+  white-space: nowrap;
+  text-shadow: none;
+}
+.pf-art-monogram.pf-official-logo-card i {
+  right: 18px;
+  top: 18px;
+  background: #8dbd55;
+  box-shadow: 0 0 14px rgba(141,189,85,.7);
+}
+.pf-footer-brand { gap: 10px; }
+@media(max-width:760px) {
+  .pf-brand-logo-frame { width: 100px; padding: 3px 4px; border-radius: 6px; }
+  .pf-footer-brand .pf-brand-logo-frame { width: 100px; }
+  .pf-art-monogram.pf-official-logo-card { width: 310px; height: 188px; padding: 14px; }
+  .pf-hero-official-logo { width: min(100%, 260px); max-height: 120px; }
+  .pf-art-monogram.pf-official-logo-card .pf-monogram-full { font-size: 12px; letter-spacing: .95px; }
+}
+@media(max-width:390px) {
+  .pf-brand-logo-frame { width: 90px; }
+  .pf-art-monogram.pf-official-logo-card { width: 292px; height: 178px; }
+  .pf-hero-official-logo { max-height: 106px; }
+}
