@@ -57,7 +57,7 @@ try {
   if (fs.existsSync(adminPage)) {
     let source = fs.readFileSync(adminPage, 'utf8');
     if (!source.includes('import "./admin.css";')) {
-      source = source.replace('"use client";', '"use client";\\n\\nimport "./admin.css";');
+      source = source.replace('"use client";', '"use client";' + String.fromCharCode(10) + String.fromCharCode(10) + 'import "./admin.css";');
     }
     const marker = '      {notice && <div className="admin-notice">';
     const shortcut = `      <section className="admin-sheet-launch">
