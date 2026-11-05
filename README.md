@@ -2,6 +2,12 @@
 
 A shared full-stack contribution-hours tracker built with Next.js, MongoDB Atlas and Vercel.
 
+## Live website
+
+- **Website:** https://pict-finance-society.vercel.app/
+- **Coordinator / admin login:** https://pict-finance-society.vercel.app/admin/login
+- **Admin workspace:** https://pict-finance-society.vercel.app/admin
+
 ## Features
 
 - Public dashboard showing approved society hours, members, categories, leaderboard and recent approved contributions.
@@ -31,15 +37,13 @@ This repository stores the application bundle in numbered `pictsrc.*.b64` chunks
    - `MONGODB_URI`: MongoDB Atlas connection string.
    - `MONGODB_DB`: `pict_finance_society`.
    - `AUTH_SECRET`: a strong random string of at least 32 characters.
-   - `BOOTSTRAP_SECRET`: a separate one-time random string of at least 24 characters.
 4. Deploy the project.
 5. Visit `/api/health` to check database connectivity.
-6. Visit `/setup` to create the first coordinator using `BOOTSTRAP_SECRET`, then remove that variable from Vercel and redeploy.
+6. For a fresh database, register the first account through `/register` and promote it to the `coordinator` role using trusted database administration before signing in. Do not expose an unauthenticated public coordinator-creation endpoint.
 7. Sign in at `/admin/login`; keep coordinator credentials private.
 
-Generate secrets locally with:
+Generate an authentication secret locally with:
 ```bash
-openssl rand -base64 48
 openssl rand -base64 48
 ```
 
@@ -57,4 +61,4 @@ A member creates a contribution with a number of hours. It is stored as `pending
 
 ## Security notes
 
-Use a dedicated least-privilege database user for the app. Do not share coordinator passwords with regular members. Remove `BOOTSTRAP_SECRET` after the initial coordinator is created. Public pages should contain only the member fields and approved hour totals intended to be visible to the society.
+Use a dedicated least-privilege database user for the app. Do not share coordinator passwords with regular members. The production coordinator account is already provisioned, and the public bootstrap/setup flow is disabled. Public pages should contain only the member fields and approved hour totals intended to be visible to the society.
