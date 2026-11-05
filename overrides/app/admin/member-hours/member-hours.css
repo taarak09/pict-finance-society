@@ -1,0 +1,59 @@
+.member-sheet-main{max-width:1500px;margin:0 auto;padding:48px 4.5% 78px}
+.member-sheet-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:26px}
+.member-sheet-heading h1{font:800 clamp(34px,4vw,50px)/1.05 Manrope,sans-serif;letter-spacing:-2.5px;margin:9px 0}
+.member-sheet-heading h1 em{font-style:normal;color:#6d8d4a}
+.member-sheet-heading p{max-width:670px;font-size:13px;line-height:1.7;color:#87938a;margin:0}
+.member-sheet-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.member-sheet-back{font-size:11px;color:#6d825d;font-weight:700}
+.member-sheet-download{display:inline-flex;align-items:center;gap:9px;padding:12px 16px;border-radius:6px;background:#173c35;color:#fff;font-size:11px;font-weight:800;box-shadow:0 7px 18px rgba(23,60,53,.13);transition:transform .2s,background .2s}
+.member-sheet-download:hover{transform:translateY(-2px);background:#245347}
+.member-sheet-download span{font-size:17px;line-height:10px}
+.member-sheet-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.member-sheet-metrics>div{background:#fff;border:1px solid #e8ece5;border-radius:9px;padding:18px 20px}
+.member-sheet-metrics span{display:block;font:9px 'DM Mono',monospace;letter-spacing:.9px;color:#8b988d;margin-bottom:10px}
+.member-sheet-metrics strong{font:800 27px Manrope,sans-serif;letter-spacing:-1px;color:#1a332c}
+.member-sheet-card{background:#fff;border:1px solid #e5eae3;border-radius:10px;overflow:hidden;box-shadow:0 12px 34px rgba(26,47,37,.035)}
+.member-sheet-toolbar{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding:22px 23px 18px}
+.member-sheet-toolbar h2{font:800 21px Manrope,sans-serif;letter-spacing:-.6px;margin:5px 0}
+.member-sheet-toolbar p{font-size:11px;color:#87938a;margin:0}
+.member-sheet-tools{display:flex;gap:9px;align-items:center}
+.member-sheet-tools input{width:230px;border:1px solid #dfe5dc;border-radius:5px;padding:10px 12px;font-size:11px;outline:none}
+.member-sheet-tools input:focus{border-color:#829d63;box-shadow:0 0 0 3px rgba(130,157,99,.1)}
+.member-sheet-tabs{display:flex;gap:3px;padding:0 23px;border-bottom:1px solid #e7ece5}
+.member-sheet-tabs button{display:flex;align-items:center;gap:8px;border:0;border-bottom:2px solid transparent;background:transparent;padding:13px 14px 12px;color:#7d8980;font-size:11px;font-weight:700}
+.member-sheet-tabs button.active{color:#1e3a31;border-bottom-color:#8eae5a}
+.member-sheet-tabs button>span{font-size:16px}
+.member-sheet-tabs small{font:10px 'DM Mono',monospace;padding:3px 6px;border-radius:10px;background:#f0f3ed;color:#768477}
+.member-sheet-grid{width:100%;overflow:auto;max-height:68vh;min-height:190px;background:#fff}
+.member-sheet-table{width:max-content;min-width:100%;border-collapse:separate;border-spacing:0;font-size:10px;color:#36443b;white-space:nowrap}
+.member-sheet-table th{position:sticky;top:0;z-index:2;background:#f0f4ec;color:#667465;text-align:left;font:700 9px 'DM Mono',monospace;letter-spacing:.2px;padding:12px 13px;border-bottom:1px solid #dce5d8;border-right:1px solid #e4eae0}
+.member-sheet-table td{padding:11px 13px;border-bottom:1px solid #edf0eb;border-right:1px solid #f0f2ee;vertical-align:top}
+.member-sheet-table tbody tr:nth-child(even){background:#fafbf8}
+.member-sheet-table tbody tr:hover{background:#f2f7ec}
+.member-sheet-name{font-weight:800;color:#213a30}
+.member-sheet-name small{display:block;margin-top:4px;font:9px 'DM Mono',monospace;color:#9aa49b}
+.member-sheet-table .numeric{text-align:right;font-variant-numeric:tabular-nums}
+.member-sheet-table .positive{color:#56833d;font-weight:800}
+.member-sheet-table .negative{color:#b45a4d}
+.member-sheet-table .total{color:#1d493b;font-weight:800}
+.member-sheet-ledger{min-width:1800px}
+.member-sheet-ledger .ledger-title{font-weight:800;color:#263e33;white-space:normal;min-width:180px;max-width:260px}
+.member-sheet-ledger .ledger-description{white-space:normal;min-width:230px;max-width:340px;line-height:1.55;color:#738075}
+.member-sheet-status{display:inline-block;border-radius:20px;padding:4px 8px;font:700 9px 'DM Mono',monospace;text-transform:capitalize}
+.member-sheet-status.approved{background:#edf6e8;color:#55813e}
+.member-sheet-status.pending{background:#fff4df;color:#a67528}
+.member-sheet-status.rejected{background:#fff0ee;color:#b4564a}
+.member-sheet-empty{padding:55px 20px;text-align:center;color:#87938a;font-size:12px}
+.member-sheet-footer{display:flex;justify-content:space-between;gap:16px;padding:12px 20px;border-top:1px solid #e8ece5;color:#87938a;font-size:10px}
+.member-sheet-error{background:#fff0ee;border:1px solid #f0d1cb;color:#a94c41;padding:12px 14px;border-radius:6px;font-size:11px;margin-bottom:14px}
+.admin-sheet-launch{margin:0 0 17px}
+.admin-sheet-link{display:flex;align-items:center;gap:16px;background:linear-gradient(100deg,#173c35,#214a3c);border:1px solid #315c48;border-radius:9px;padding:17px 20px;color:white;transition:transform .2s,box-shadow .2s}
+.admin-sheet-link:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(23,60,53,.15)}
+.admin-sheet-icon{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;background:rgba(213,240,166,.16);border:1px solid rgba(213,240,166,.25);border-radius:9px;color:#d3ed99;font-size:25px}
+.admin-sheet-copy{display:flex;flex:1;flex-direction:column;gap:4px}
+.admin-sheet-copy small{font:9px 'DM Mono',monospace;color:#c0d6a0;letter-spacing:1px}
+.admin-sheet-copy strong{font:800 15px Manrope,sans-serif;color:#fff}
+.admin-sheet-copy em{font-style:normal;font-size:10px;color:#c4d1c5}
+.admin-sheet-link>b{font-size:10px;color:#d9eea7;white-space:nowrap}
+@media(max-width:850px){.member-sheet-main{padding:32px 4% 60px}.member-sheet-heading{align-items:flex-start;flex-direction:column}.member-sheet-metrics{grid-template-columns:repeat(2,1fr)}.member-sheet-toolbar{align-items:flex-start;flex-direction:column}.member-sheet-tools{width:100%}.member-sheet-tools input{flex:1;width:auto}.member-sheet-footer{flex-direction:column}.admin-sheet-link{align-items:flex-start}.admin-sheet-link>b{margin-left:auto;align-self:center}}
+@media(max-width:560px){.member-sheet-heading h1{font-size:34px}.member-sheet-metrics>div{padding:14px}.member-sheet-metrics strong{font-size:23px}.member-sheet-actions{width:100%;justify-content:space-between}.member-sheet-tabs{padding:0 8px}.member-sheet-tabs button{padding-left:9px;padding-right:9px}.admin-sheet-copy em{display:none}.admin-sheet-copy strong{font-size:13px}.admin-sheet-link>b{font-size:9px}}
