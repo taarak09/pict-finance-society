@@ -23,6 +23,15 @@ try {
     const fixed = 'const setupLocks = db.collection<{ _id: string; createdAt: Date }>("system_locks");';
     if (source.includes(original)) fs.writeFileSync(bootstrapRoute, source.replace(original, fixed));
   }
+  // Apply checked-in source overrides after extracting the compact source archive.
+  // This keeps the app source editable while retaining the repository's split archive packaging.
+  const overrides = path.join(root, 'overrides');
+  if (fs.existsSync(overrides)) {
+    for (const entry of fs.readdirSync(overrides, { withFileTypes: true })) {
+      fs.cpSync(path.join(overrides, entry.name), path.join(root, entry.name), { recursive: true });
+    }
+  }
+
 } finally {
   fs.rmSync(archive, { force: true });
   for (const name of chunks) fs.rmSync(path.join(root, name), { force: true });
