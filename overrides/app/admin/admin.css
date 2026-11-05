@@ -1,0 +1,11 @@
+.admin-sheet-launch{margin:0 0 17px}
+.admin-sheet-link{display:flex;align-items:center;gap:16px;background:linear-gradient(100deg,#173c35,#214a3c);border:1px solid #315c48;border-radius:9px;padding:17px 20px;color:white;transition:transform .2s,box-shadow .2s;text-decoration:none}
+.admin-sheet-link:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(23,60,53,.15)}
+.admin-sheet-icon{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;background:rgba(213,240,166,.16);border:1px solid rgba(213,240,166,.25);border-radius:9px;color:#d3ed99;font-size:25px}
+.admin-sheet-copy{display:flex;flex:1;flex-direction:column;gap:4px}
+.admin-sheet-copy small{font:9px 'DM Mono',monospace;color:#c0d6a0;letter-spacing:1px}
+.admin-sheet-copy strong{font:800 15px Manrope,sans-serif;color:#fff}
+.admin-sheet-copy em{font-style:normal;font-size:10px;color:#c4d1c5}
+.admin-sheet-link>b{font-size:10px;color:#d9eea7;white-space:nowrap}
+@media(max-width:850px){.admin-sheet-link{align-items:flex-start}.admin-sheet-link>b{margin-left:auto;align-self:center}}
+@media(max-width:560px){.admin-sheet-copy em{display:none}.admin-sheet-copy strong{font-size:13px}.admin-sheet-link>b{font-size:9px}}
