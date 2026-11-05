@@ -16,6 +16,7 @@ A shared full-stack contribution-hours tracker built with Next.js, MongoDB Atlas
 - Every member submission is pending until a coordinator approves it.
 - A separate admin sign-in at `/admin/login` and protected admin workspace at `/admin`.
 - Admins can add approved hours for any member, edit any contribution's hours/details/status/date, and delete records.
+- Coordinators can open an Excel-style member hours workbook with member summaries, status totals, category hours and a full contribution ledger, then download both sheets as an `.xlsx` file.
 - Admin-only changes are recorded in an audit-log collection.
 - Credited hours are calculated from approved contribution records only.
 - Public dashboard, member directory and personal activity refresh every 15 seconds.
