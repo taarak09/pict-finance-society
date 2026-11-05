@@ -35,10 +35,11 @@ try {
       ],
     ];
     for (const [original, fixed] of patches) {
-      if (!source.includes(original)) {
+      if (source.includes(original)) {
+        source = source.replace(original, fixed);
+      } else if (!source.includes(fixed)) {
         throw new Error('Expected bootstrap route text was not found; refusing an incomplete patch.');
       }
-      source = source.replace(original, fixed);
     }
     fs.writeFileSync(bootstrapRoute, source);
   }
