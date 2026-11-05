@@ -58,9 +58,10 @@ export default async function HomePage() {
           <div className="pf-art-cross pf-cross-a">+</div>
           <div className="pf-art-cross pf-cross-b">✳</div>
           <div className="pf-art-monogram">
-            <span className="pf-monogram-top">PICT · PUNE</span>
+            <span className="pf-monogram-top">STUDENT-LED COMMUNITY</span>
             <strong>PF<span>.</span></strong>
-            <span className="pf-monogram-bottom">FINANCE SOCIETY</span>
+            <span className="pf-monogram-full">PICT FINANCE SOCIETY</span>
+            <span className="pf-monogram-bottom">PICT · PUNE</span>
             <i />
           </div>
           <div className="pf-float-card pf-float-card-top"><span className="pf-float-icon">↗</span><span><b>Ideas in motion</b><small>Learn · Analyse · Grow</small></span></div>
