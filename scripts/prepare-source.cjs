@@ -52,6 +52,31 @@ try {
     }
   }
 
+  // Add a prominent shortcut to the coordinator-only member hours workbook.
+  const adminPage = path.join(root, 'app', 'admin', 'page.tsx');
+  if (fs.existsSync(adminPage)) {
+    let source = fs.readFileSync(adminPage, 'utf8');
+    const marker = '      {notice && <div className="admin-notice">';
+    const shortcut = `      <section className="admin-sheet-launch">
+        <a className="admin-sheet-link" href="/admin/member-hours">
+          <span className="admin-sheet-icon" aria-hidden="true">▦</span>
+          <span className="admin-sheet-copy">
+            <small>MEMBER REPORTING</small>
+            <strong>Open member hours spreadsheet</strong>
+            <em>View every member, approved and pending hours, and the full contribution ledger.</em>
+          </span>
+          <b>Open workbook ↗</b>
+        </a>
+      </section>
+`;
+    if (source.includes(marker)) {
+      source = source.replace(marker, shortcut + marker);
+    } else if (!source.includes('admin-sheet-launch')) {
+      throw new Error('Admin dashboard insertion point was not found.');
+    }
+    fs.writeFileSync(adminPage, source);
+  }
+
 } finally {
   fs.rmSync(archive, { force: true });
   for (const name of chunks) fs.rmSync(path.join(root, name), { force: true });
