@@ -9,3 +9,4 @@
 .admin-sheet-link>b{font-size:10px;color:#d9eea7;white-space:nowrap}
 @media(max-width:850px){.admin-sheet-link{align-items:flex-start}.admin-sheet-link>b{margin-left:auto;align-self:center}}
 @media(max-width:560px){.admin-sheet-copy em{display:none}.admin-sheet-copy strong{font-size:13px}.admin-sheet-link>b{font-size:9px}}
+.admin-manual-form .manual-bulk-note{display:block;margin-top:7px;font-size:10px;line-height:1.45;color:#7d8a7f;font-weight:500}
