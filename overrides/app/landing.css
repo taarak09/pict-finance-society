@@ -145,3 +145,117 @@
 @media(max-width:760px){.pf-nav{width:calc(100% - 36px);height:72px}.pf-brand{min-width:0}.pf-brand-mark{width:39px;height:39px}.pf-brand-copy strong{font-size:11px}.pf-brand-copy small{font-size:8px}.pf-nav-links{display:none}.pf-nav-actions{gap:13px}.pf-nav-login{font-size:10px}.pf-nav-cta{font-size:10px;padding:10px 12px;gap:10px}.pf-hero{width:calc(100% - 40px);min-height:0;grid-template-columns:1fr;padding:70px 0 72px}.pf-hero-copy{padding:0}.pf-hero h1{font-size:clamp(55px,13vw,78px);letter-spacing:-4.5px;margin:25px 0 18px}.pf-hero-lead{font-size:13px;max-width:440px}.pf-hero-actions{margin-top:25px;gap:9px}.pf-button{min-height:46px;padding:0 15px;font-size:10px;gap:14px}.pf-hero-note{margin-top:28px;font-size:7px;letter-spacing:.65px}.pf-hero-art{height:380px;scale:.85;margin:-4px -20px 0}.pf-art-monogram{width:205px;height:205px;border-radius:37px}.pf-art-monogram:before{border-radius:27px}.pf-art-monogram strong{font-size:80px}.pf-orbit-a{width:350px;height:170px}.pf-orbit-b{width:285px;height:285px}.pf-orbit-c{height:360px;width:195px}.pf-float-card-top{right:0;top:42px}.pf-float-card-bottom{left:0;bottom:50px}.pf-art-chart{height:150px}.pf-scroll-cue{display:none}.pf-marquee-track span{font-size:9px;gap:20px;padding:16px 10px}.pf-intro,.pf-explore{padding:75px 23px}.pf-intro-grid{grid-template-columns:1fr;gap:25px;margin-top:35px}.pf-intro h2,.pf-explore h2{font-size:clamp(36px,9vw,48px);letter-spacing:-2px}.pf-intro-copy .pf-intro-lead{font-size:14px}.pf-intro-copy p{font-size:11px}.pf-explore-heading{display:block;margin:34px 0 27px}.pf-explore-heading>p{margin-top:18px;font-size:11px}.pf-focus-grid{grid-template-columns:1fr;gap:12px}.pf-focus-card{min-height:325px;padding:21px}.pf-card-art{height:145px}.pf-community{min-height:440px;padding:70px 23px}.pf-community-content{margin-top:48px}.pf-community h2{font-size:clamp(35px,8.5vw,48px);letter-spacing:-2px}.pf-community-content>p{font-size:11px}.pf-community-orbit{width:420px;height:420px}.pf-footer{width:calc(100% - 36px);min-height:130px;flex-wrap:wrap;justify-content:space-between;padding:22px 0;gap:12px}.pf-footer>span{order:3;width:100%;font-size:7px}.pf-footer>.pf-brand .pf-brand-copy strong{font-size:10px}.pf-footer>div{gap:13px}.pf-footer>div a{font-size:9px}}
 @media(max-width:390px){.pf-nav-cta{padding:9px 10px}.pf-nav-login{display:none}.pf-brand-copy strong{font-size:10px}.pf-hero h1{font-size:54px}.pf-hero-art{scale:.76;margin:-22px -28px -12px}.pf-hero-actions{align-items:stretch;flex-direction:column}.pf-button{width:max-content}}
 @media(prefers-reduced-motion:reduce){.pf-landing *,.pf-landing *:before,.pf-landing *:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.pf-chart-line{stroke-dashoffset:0}}
+
+
+/* Readability pass: keep the editorial look while making labels easy to scan. */
+.pf-landing { font-size: 16px; }
+.pf-brand-copy small { font-size: 10px; letter-spacing: 1.2px; }
+.pf-nav-links a, .pf-nav-login { font-size: 13px; }
+.pf-nav-cta { font-size: 12px; }
+.pf-kicker { font-size: 11px; letter-spacing: 1.55px; }
+.pf-hero-lead { font-size: 16px; line-height: 1.85; }
+.pf-hero-note { font-size: 10px; letter-spacing: .95px; }
+.pf-button { font-size: 13px; }
+.pf-monogram-top, .pf-monogram-bottom { font-size: 10px; letter-spacing: 1.8px; }
+.pf-monogram-full {
+  position: relative; z-index: 2; display: block; margin-top: -6px;
+  color: var(--pf-mint); font: 800 13px/1.25 Manrope, sans-serif;
+  letter-spacing: 1.05px; white-space: nowrap; opacity: 0;
+  text-shadow: 0 0 18px rgba(201,243,109,.26);
+  animation: pf-name-reveal 1s 1.4s cubic-bezier(.2,.8,.2,1) forwards;
+}
+.pf-float-card b { font-size: 12px; }
+.pf-float-card small { font-size: 10px; }
+.pf-art-caption { font-size: 10px; letter-spacing: 1.1px; }
+.pf-scroll-cue { font-size: 10px; }
+.pf-marquee-track span { font-size: 11px; }
+.pf-section-index { font-size: 11px; }
+.pf-intro-copy p { font-size: 14px; }
+.pf-intro-copy .pf-intro-lead { font-size: 17px; }
+.pf-explore-heading>p { font-size: 14px; }
+.pf-card-meta { font-size: 10px; }
+.pf-card-meta span { font-size: 10px; }
+.pf-focus-card p { font-size: 12px; }
+.pf-community-kicker { font-size: 11px; }
+.pf-community-content>p { font-size: 14px; }
+.pf-footer>span { font-size: 10px; }
+.pf-footer>div a { font-size: 12px; }
+
+/* Member workspace, forms and admin pages: lift microcopy to readable sizes. */
+.app-shell { font-size: 15px; }
+.app-shell .brand-copy small { font-size: 10px !important; }
+.app-shell .live-indicator,
+.app-shell .side-section-label,
+.app-shell .eyebrow,
+.app-shell .muted-label,
+.app-shell .stat-top,
+.app-shell .stat-foot,
+.app-shell .leader-info span,
+.app-shell .leader-hours small,
+.app-shell .category-meta,
+.app-shell .category-foot,
+.app-shell .data-table th,
+.app-shell .user-chip-name small,
+.app-shell .member-count-badge,
+.app-shell .rank,
+.app-shell .field-label,
+.app-shell .page-subtitle,
+.app-shell .recent-table-wrap,
+.app-shell .leader-footer,
+.app-shell .side-year,
+.app-shell .sidebar-bottom p,
+.app-shell .nav-item,
+.app-shell .site-footer,
+.auth-page .eyebrow,
+.auth-page .back-link,
+.auth-page .auth-intro,
+.auth-page .auth-left-footer,
+.auth-page .auth-art-kicker,
+.auth-page .field-label {
+  font-size: max(11px, .9em) !important;
+}
+.app-shell .leader-info span,
+.app-shell .category-meta,
+.app-shell .category-foot,
+.app-shell .data-table th,
+.app-shell .leader-footer,
+.app-shell .sidebar-bottom p,
+.app-shell .page-subtitle,
+.app-shell .site-footer,
+.auth-page .auth-intro,
+.auth-page .auth-left-footer { line-height: 1.55; }
+.app-shell .data-table td { font-size: max(12px, .92em) !important; }
+.app-shell .nav-item { padding-top: 13px; padding-bottom: 13px; }
+.app-shell .field-label { line-height: 1.55; }
+.app-shell input, .app-shell textarea, .app-shell select,
+.auth-page input, .auth-page textarea, .auth-page select { font-size: 15px !important; }
+.app-shell button, .app-shell a.button, .auth-page button, .auth-page a.button { font-size: max(12px, .95em); }
+
+@keyframes pf-name-reveal {
+  0% { opacity: 0; transform: translateY(9px); letter-spacing: 2px; filter: blur(4px); }
+  100% { opacity: 1; transform: translateY(0); letter-spacing: 1.05px; filter: blur(0); }
+}
+
+@media(max-width:760px) {
+  .pf-brand-copy small { font-size: 9px; }
+  .pf-nav-links a, .pf-nav-login { font-size: 12px; }
+  .pf-kicker { font-size: 10px; }
+  .pf-hero-lead { font-size: 14px; }
+  .pf-hero-note { font-size: 9px; line-height: 1.5; }
+  .pf-button { font-size: 11px; }
+  .pf-monogram-full { font-size: 12px; letter-spacing: .85px; }
+  .pf-float-card b { font-size: 11px; }
+  .pf-float-card small { font-size: 10px; }
+  .pf-art-caption { font-size: 9px; }
+  .pf-marquee-track span { font-size: 10px; }
+  .pf-section-index { font-size: 10px; }
+  .pf-intro-copy p { font-size: 12px; }
+  .pf-intro-copy .pf-intro-lead { font-size: 15px; }
+  .pf-explore-heading>p, .pf-focus-card p, .pf-community-content>p { font-size: 12px; }
+  .pf-card-meta, .pf-card-meta span { font-size: 9px; }
+  .pf-footer>span { font-size: 8px; }
+  .pf-footer>div a { font-size: 10px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .pf-monogram-full { opacity: 1; animation: none; }
+}
