@@ -9,3 +9,11 @@
 .admin-sheet-link>b{font-size:10px;color:#d9eea7;white-space:nowrap}
 @media(max-width:850px){.admin-sheet-link{align-items:flex-start}.admin-sheet-link>b{margin-left:auto;align-self:center}}
 @media(max-width:560px){.admin-sheet-copy em{display:none}.admin-sheet-copy strong{font-size:13px}.admin-sheet-link>b{font-size:9px}}
+.admin-sheet-file{display:flex;align-items:center;gap:13px;margin-top:9px;padding:13px 16px;background:#fff;border:1px solid #dfe7dc;border-radius:8px;color:#244237;text-decoration:none;transition:border-color .2s,transform .2s,box-shadow .2s}
+.admin-sheet-file:hover{border-color:#91b27a;transform:translateY(-1px);box-shadow:0 7px 18px rgba(23,60,53,.07)}
+.admin-sheet-file-icon{display:grid;place-items:center;width:54px;height:43px;flex:0 0 54px;border-radius:5px;background:#217346;color:#fff;font:800 11px 'DM Mono',monospace;letter-spacing:.3px;box-shadow:inset 0 -5px 0 rgba(0,0,0,.08)}
+.admin-sheet-file-copy{display:flex;flex-direction:column;gap:4px;flex:1}
+.admin-sheet-file-copy strong{font:800 13px Manrope,sans-serif;color:#203b30}
+.admin-sheet-file-copy small{font-size:10px;color:#87938a}
+.admin-sheet-file>b{font:700 10px 'DM Mono',monospace;color:#39764d;white-space:nowrap}
+@media(max-width:560px){.admin-sheet-file{gap:10px;padding:11px}.admin-sheet-file-icon{width:47px;height:39px;flex-basis:47px}.admin-sheet-file-copy strong{font-size:12px}.admin-sheet-file-copy small{font-size:9px}.admin-sheet-file>b{font-size:9px}}
