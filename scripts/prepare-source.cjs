@@ -56,6 +56,9 @@ try {
   const adminPage = path.join(root, 'app', 'admin', 'page.tsx');
   if (fs.existsSync(adminPage)) {
     let source = fs.readFileSync(adminPage, 'utf8');
+    if (!source.includes('import "./admin.css";')) {
+      source = source.replace('"use client";', '"use client";\\n\\nimport "./admin.css";');
+    }
     const marker = '      {notice && <div className="admin-notice">';
     const shortcut = `      <section className="admin-sheet-launch">
         <a className="admin-sheet-link" href="/admin/member-hours">
