@@ -65,10 +65,18 @@ try {
           <span className="admin-sheet-icon" aria-hidden="true">▦</span>
           <span className="admin-sheet-copy">
             <small>MEMBER REPORTING</small>
-            <strong>Open member hours spreadsheet</strong>
-            <em>View every member, approved and pending hours, and the full contribution ledger.</em>
+            <strong>Member hours spreadsheet</strong>
+            <em>Preview every member, their hours by status, and the full contribution ledger.</em>
           </span>
-          <b>Open workbook ↗</b>
+          <b>Preview workbook ↗</b>
+        </a>
+        <a className="admin-sheet-file" href="/api/admin/member-hours/export" title="Download the live Excel workbook">
+          <span className="admin-sheet-file-icon" aria-hidden="true">XLSX</span>
+          <span className="admin-sheet-file-copy">
+            <strong>Download Excel file</strong>
+            <small>Live member data · Two worksheets · .xlsx format</small>
+          </span>
+          <b>↓ Download</b>
         </a>
       </section>
 `;
@@ -78,6 +86,21 @@ try {
       throw new Error('Admin dashboard insertion point was not found.');
     }
     fs.writeFileSync(adminPage, source);
+  }
+
+  // Make administrator login copy and form controls comfortably readable.
+  const adminLoginPage = path.join(root, 'app', 'admin', 'login', 'page.tsx');
+  if (fs.existsSync(adminLoginPage)) {
+    let source = fs.readFileSync(adminLoginPage, 'utf8');
+    if (!source.includes('import "./admin-login.css";')) {
+      source = source.replace('"use client";', '"use client";' + String.fromCharCode(10) + String.fromCharCode(10) + 'import "./admin-login.css";');
+    }
+    if (source.includes('return <main className="auth-page">')) {
+      source = source.replace('return <main className="auth-page">', 'return <main className="auth-page admin-login-page">');
+    } else if (!source.includes('auth-page admin-login-page')) {
+      throw new Error('Admin login page root was not found.');
+    }
+    fs.writeFileSync(adminLoginPage, source);
   }
 
 } finally {
