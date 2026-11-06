@@ -9,6 +9,16 @@ export default async function HomePage() {
 
   return (
     <main className="pf-landing">
+      <section className="pf-opening" aria-label="PICT Finance Society">
+        <div className="pf-opening-orbit pf-opening-orbit-one" />
+        <div className="pf-opening-orbit pf-opening-orbit-two" />
+        <div className="pf-opening-content">
+          <span className="pf-opening-mark">PICT · PUNE</span>
+          <h1 className="pf-opening-title"><span>PICT</span> <em>Finance</em> <span>Society</span></h1>
+          <p>WHERE FINANCE MEETS CURIOSITY</p>
+          <div className="pf-opening-rule"><i /></div>
+        </div>
+      </section>
       <header className="pf-nav">
         <Link href="/" className="pf-brand" aria-label="PICT Finance Society home">
           <span className="pf-brand-logo-frame"><img className="pf-brand-logo" src="/pict-finance-society-logo.png" alt="PICT Finance Society logo" /></span>
@@ -33,9 +43,10 @@ export default async function HomePage() {
           </div>
           <div className="pf-hero-note">PICT FINANCE SOCIETY <i /> LEARN · DISCUSS · BUILD</div>
         </div>
-        <div className="pf-hero-photo">
-          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85" alt="Students collaborating around a table" />
-          <div className="pf-photo-caption"><span>Ideas grow when they're shared.</span><small>THE PICT COMMUNITY</small></div>
+        <div className="pf-hero-visual" aria-hidden="true">
+          <div className="pf-visual-top"><span>MARKET PULSE</span><span>PICT / FINANCE</span></div>
+          <div className="pf-visual-chart"><svg viewBox="0 0 560 260" role="presentation"><path className="pf-chart-grid" d="M0 50H560M0 110H560M0 170H560M0 230H560M70 0V260M180 0V260M290 0V260M400 0V260M510 0V260"/><path className="pf-chart-area" d="M0 210 C45 195 58 205 92 168 S150 180 180 135 S240 145 270 110 S320 128 350 85 S410 105 445 62 S500 72 560 22 L560 260 L0 260Z"/><path className="pf-chart-line" d="M0 210 C45 195 58 205 92 168 S150 180 180 135 S240 145 270 110 S320 128 350 85 S410 105 445 62 S500 72 560 22"/></svg></div>
+          <div className="pf-visual-bottom"><strong>LEARN THE LANGUAGE OF FINANCE.</strong><span>01 — EXPLORE · 02 — ANALYSE · 03 — BUILD</span></div>
         </div>
       </section>
 
@@ -62,8 +73,8 @@ export default async function HomePage() {
       </section>
 
       <section className="pf-community" id="community">
-        <div className="pf-community-photo"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=85" alt="A team sharing ideas during a workshop" /></div>
-        <div className="pf-community-copy"><div className="pf-section-label"><span>03</span> THE COMMUNITY</div><h2>Good ideas don't<br />happen <em>alone.</em></h2><p>Meet people who are curious, exchange perspectives, take part in activities and make your time at PICT count.</p><Link href={memberHref} className="pf-button pf-button-primary">{user ? "Open member workspace" : "Join the community"} <span>↗</span></Link></div>
+        <div className="pf-community-copy"><div className="pf-section-label"><span>03</span> LEARN BY TAKING PART</div><h2>Bring your curiosity.<br /><em>Build your perspective.</em></h2><p>Take part in discussions, explore new ideas and contribute to a student-led space for finance, markets and technology.</p><Link href={memberHref} className="pf-button pf-button-primary">{user ? "Open member workspace" : "Join the society"} <span>↗</span></Link></div>
+        <div className="pf-community-art" aria-hidden="true"><div className="pf-art-ring" /><div className="pf-art-core">P<span>F</span>S</div><div className="pf-art-caption">THINK · QUESTION · GROW</div></div>
       </section>
 
       <footer className="pf-footer">
